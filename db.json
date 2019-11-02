@@ -2,24 +2,30 @@
   "index": [
     {
       "id": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
-      "contentType": "image",
+      "contentType": {
+        "source": "CC0-SA",
+        "license": "some comment",
+        "altText": "A cartoon dog sites in a kitchen drinking coffee",
+        "image": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg",
+        "thumbnails": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg"
+      },
       "rendered": "string",
-      "tags": [
-        "election",
-        "penguins"
-      ],
+      "tags": ["election", "penguins"],
       "createdAt": "2019-11-01T01:51:28.210Z",
       "indexedAt": "2019-11-01T01:51:28.210Z",
       "details": "lorem ispsum foo bar details and"
     },
     {
       "id": "3fa85f64-5779-4562-b3fc-2c45f66afa6",
-      "contentType": "image",
+      "contentType": {
+        "source": "CCP-SA",
+        "license": "some text here",
+        "altText": "A picture is here",
+        "image": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg",
+        "thumbnails": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg"
+      },
       "rendered": "string",
-      "tags": [
-        "impeachment",
-        "trump"
-      ],
+      "tags": ["impeachment", "trump"],
       "createdAt": "2019-11-01T01:51:28.210Z",
       "indexedAt": "2019-11-01T01:51:28.210Z",
       "details": "lorem ispsum foo bar details and"
@@ -28,40 +34,50 @@
       "id": "c1e6fef8-0017-43d4-8d27-a2cb30d41a4b",
       "contentType": "image",
       "rendered": "string",
-      "tags": [
-        "harris",
-        "california"
-      ],
+      "tags": ["harris", "california"],
+      "createdAt": "2019-11-01T01:51:28.210Z",
+      "indexedAt": "2019-11-01T01:51:28.210Z",
+      "details": "lorem ispsum foo bar details and"
+    },
+    {
+      "id": "0c34f21f-99da-4744-98ad-7144f6d211c9",
+      "contentType": {
+        "source": "CC0-SA",
+        "license": "some comment",
+        "altText": "Anime cartoon",
+        "image": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg",
+        "thumbnails": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg"
+      },
+      "rendered": "string",
+      "tags": ["anime", "japan"],
       "createdAt": "2019-11-01T01:51:28.210Z",
       "indexedAt": "2019-11-01T01:51:28.210Z",
       "details": "lorem ispsum foo bar details and"
     }
   ],
-  "search": [
-    {
-      "searchTimeMsecs": 3,
-      "query": {
-        "query": "trump",
-        "contentType:": [
-          "image"
-        ],
-        "timeAfter": "2019-04-23T00:22:33Z",
-        "timeBefore": "2019-04-23T00:22:33Z"
-      },
-      "results": [
-        {
-          "id": "3fa85f64-5779-4562-b3fc-2c45f66afa6",
-          "contentType": "image",
-          "rendered": "string",
-          "tags": [
-            "impeachment",
-            "trump"
-          ],
-          "createdAt": "2019-11-01T01:51:28.210Z",
-          "indexedAt": "2019-11-01T01:51:28.210Z",
-          "details": "lorem ispsum foo bar details and"
-        }
-      ]
-    }
-  ]
+  "search": {
+    "searchTimeMsecs": 0,
+    "query": {
+      "query": "trump images",
+      "contentType": ["image"],
+      "timeAfter": "2019-04-23T00:22:33Z",
+      "timeBefore": "2019-04-23T00:22:33Z"
+    },
+    "results": [
+      {
+        "contentType": {
+          "source": "CC0-SA",
+          "license": "some comment",
+          "altText": "A cartoon dog sites in a kitchen drinking coffee",
+          "image": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg",
+          "thumbnails": "https://images.axios.com/lBXbssx2IJH5TS3qUiuQ8OYqcQs=/0x0:1920x1080/1920x1080/2019/10/31/1572487857087.jpg"
+        },
+        "uuid": "3fa85f64-5717-4562-b3fc-2c963f66afa6",
+        "rendered": "string",
+        "tags": ["election", "penguins"],
+        "createdAt": "2019-11-02T12:49:18.519Z",
+        "indexedAt": "2019-11-02T12:49:18.519Z"
+      }
+    ]
+  }
 }

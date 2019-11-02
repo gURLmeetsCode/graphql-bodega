@@ -17,7 +17,7 @@ const ImageType = new GraphQLObjectType({
     license: { type: GraphQLString },
     altText: { type: GraphQLString },
     image: { type: GraphQLString },
-    thumbnails: { type: new GraphQLList(GraphQLString) }
+    thumbnails: { type: GraphQLString }
   }
 });
 
@@ -25,7 +25,7 @@ const IndexType = new GraphQLObjectType({
   name: "Index",
   fields: {
     uuid: { type: GraphQLString },
-    contentType: { type: GraphQLString },
+    contentType: { type: ImageType },
     rendered: { type: GraphQLString },
     tags: { type: new GraphQLList(GraphQLString) },
     createdAt: { type: GraphQLString },
@@ -47,9 +47,11 @@ const SearchType = new GraphQLObjectType({
 const SearchQueryType = new GraphQLObjectType({
   name: "SearchQuery",
   fields: {
-    searchTimeMsecs: { type: GraphQLFloat },
-    query: { type: GraphQLString },
-    results: { type: new GraphQLList(IndexType) }
+    searchTimeMsecs: { type: GraphQLInt },
+    results: { type: new GraphQLList(IndexType) },
+    query: {
+      type: SearchType
+    }
   }
 });
 
@@ -63,6 +65,13 @@ const RootQuery = new GraphQLObjectType({
         return axios
           .get(`http://localhost:3000/index/${args.id}`)
           .then(res => res.data);
+      }
+    },
+    search: {
+      type: SearchQueryType,
+      args: { query: { type: GraphQLString } },
+      resolve(parentValue, args) {
+        return axios.get(`http://localhost:3000/search/`).then(res => res.data);
       }
     }
   }
